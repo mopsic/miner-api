@@ -1,0 +1,29 @@
+{
+  "name": "mopsic/miner-api",
+  "description": "Collection of api clients for mining",
+  "keywords": [ "php", "api", "mining"],
+  "homepage": "https://github.com/mopsic/miner-api",
+  "license": "MIT",
+  "type": "library",
+  "require": {
+    "php": ">=7.1",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mopsic\\MinerApi\\": "src/",
+      "Mopsic\\MinerApi\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  },
+  "authors": [
+    {
+      "name": "Egor Zyuskin",
+      "email": "ezyuskin@amaxlab.ru"
+    }
+  ]
+}
