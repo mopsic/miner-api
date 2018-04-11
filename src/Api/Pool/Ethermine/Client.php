@@ -73,7 +73,7 @@ class Client implements PoolApiInterface
                 array_push($workers, (new Worker())
                     ->setName($worker['worker'])
                     ->setHashRate(round($worker['currentHashrate']/1000000, 5))
-                    ->setLastSeen((new \DateTime())->setTimestamp($data['lastSeen']))
+                    ->setLastSeen((new \DateTime())->setTimestamp($worker['lastSeen']))
                 );
             }
             $miner->setWorkers($workers);
