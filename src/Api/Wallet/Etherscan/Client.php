@@ -72,7 +72,7 @@ class Client implements WalletApiInterface
     {
         return (new Wallet())
             ->setAddress($address)
-            ->setBalance($data['result']/(10**18))
+            ->setBalance(round($data['result']/(10**18), 5))
         ;
     }
 
