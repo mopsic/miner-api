@@ -17,7 +17,7 @@ class Client implements WalletApiInterface
 {
     const NAME = 'etherscan';
 
-    const URL_BALANCE = 'api?module=account&action=balance&address=%s&tag=latest&apikey=%s';
+    const URL_BALANCE = '/api?module=account&action=balance&address=%s&tag=latest&apikey=%s';
 
     /**
      * @var string
