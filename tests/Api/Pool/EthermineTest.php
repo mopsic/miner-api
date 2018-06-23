@@ -66,6 +66,7 @@ class EthermineTest extends ApiTestCase
         $this->assertEquals(1, count($miner->getWorkers()));
         $this->assertEquals('0x1234567891012121346', $miner->getAddress());
         $this->assertEquals(0.01258, $miner->getBalance());
+        $this->assertEquals(0.05, $miner->getPayoutAmount());
         $this->assertEquals('rig0', $miner->getWorkers()[0]->getName());
         $this->assertEquals(69.55556, $miner->getWorkers()[0]->getHashRate());
         $this->assertEquals(new \DateTime('2018-04-11T19:59:08.000000+0300'), $miner->getWorkers()[0]->getLastSeen());

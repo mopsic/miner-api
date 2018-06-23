@@ -25,6 +25,11 @@ class Miner implements MinerInterface
     private $workers = [];
 
     /**
+     * @var float
+     */
+    private $payoutAmount = 0;
+
+    /**
      * @return string
      */
     public function getAddress(): string
@@ -80,6 +85,26 @@ class Miner implements MinerInterface
     public function setWorkers(array $workers)
     {
         $this->workers = $workers;
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPayoutAmount(): float
+    {
+        return $this->payoutAmount;
+    }
+
+    /**
+     * @param float $payoutAmount
+     *
+     * @return $this
+     */
+    public function setPayoutAmount(float $payoutAmount)
+    {
+        $this->payoutAmount = $payoutAmount;
 
         return $this;
     }

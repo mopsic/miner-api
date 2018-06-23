@@ -19,7 +19,7 @@ class EtherscanTest extends ApiTestCase
         $wallet = $client->getWallet('0x1234567891012121346');
 
         $this->assertEquals('0x1234567891012121346', $wallet->getAddress());
-        $this->assertEquals(0.41660600721504165, $wallet->getBalance());
+        $this->assertEquals(0.41661, $wallet->getBalance());
     }
 
     public function testApiResponseException()

@@ -18,6 +18,11 @@ interface MinerInterface
     public function getBalance(): float;
 
     /**
+     * @return float
+     */
+    public function getPayoutAmount(): float;
+
+    /**
      * @return WorkerInterface[]|array
      */
     public function getWorkers(): array;

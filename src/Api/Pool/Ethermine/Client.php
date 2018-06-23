@@ -65,6 +65,7 @@ class Client implements PoolApiInterface
         $miner = (new Miner())
             ->setBalance(round($data['data']['currentStatistics']['unpaid']/1000000000000000000, 5))
             ->setAddress($address)
+            ->setPayoutAmount(round($data['data']['settings']['minPayout']/(10**18), 5))
         ;
 
         if (!empty($data['data']['workers'])) {
