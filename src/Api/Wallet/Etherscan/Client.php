@@ -3,6 +3,7 @@
 namespace Mopsic\MinerApi\Api\Wallet\Etherscan;
 
 use Mopsic\MinerApi\Contract\Api\Wallet\WalletInterface;
+use Mopsic\MinerApi\Contract\Api\Wallet\WalletTransactionInterface;
 use Mopsic\MinerApi\Contract\Api\WalletApiInterface;
 use Mopsic\MinerApi\Contract\Client\HttpClientInterface;
 use GuzzleHttp\Psr7\Request;
@@ -83,5 +84,15 @@ class Client implements WalletApiInterface
     private function createRequest(string $address): Request
     {
         return (new Request('GET',$this->baseUrl.sprintf(self::URL_BALANCE, $address, $this->apiKey)));
+    }
+
+    /**
+     * @param string $address
+     * @param array|null $options
+     * @return array|WalletTransactionInterface[]|null
+     */
+    public function getTransactions(string $address, ?array $options = []): ?array
+    {
+        // TODO: Implement getTransactions() method.
     }
 }
